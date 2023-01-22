@@ -1,5 +1,12 @@
 {
+  "scripts": {
+    "devindex": "nodemon index.js",
+    "startindex": "node index.js",
+    "devserver": "nodemon server.js",
+    "startserver": "node server.js"
+  },
   "dependencies": {
+    "dotenv": "^16.0.3",
     "nodemon": "^2.0.20"
   }
 }
