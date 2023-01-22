@@ -1,11 +1,17 @@
-require('dotenv').config();
-const http = require('http');
-const path = require('path');
-const fs = require('fs');
+
+import dotenv from 'dotenv'
+dotenv.config()
+
+import http from 'http';
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from 'url';
 
 const PORT = process.env.PORT;
 
 const app = http.createServer((req, res) => {
+    const __filename = fileURLToPath(import.meta.url);
+    const __dirname = path.dirname(__filename);
     let filePath = path.join(__dirname, 'public', req.url === '/' ? 'index.html' : req.url)
     let extName = path.extname(filePath);
 

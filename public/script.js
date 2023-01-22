@@ -2,6 +2,7 @@ const button = document.getElementById('button');
 const dataList = document.getElementById('data')
 
 button.addEventListener('click',() => {
+    console.log('click')
     fetch('http://localhost:5000/data.json')
         .then(res => res.json())
         .then(data => {

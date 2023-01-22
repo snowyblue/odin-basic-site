@@ -1,7 +1,15 @@
 #!/usr/bin/env node
-require('dotenv').config();
-const http = require('http');
-const fs = require('fs/promises');
+
+//using commonJs module loader
+import http from 'http';
+import fs from "fs/promises";
+import dotenv from 'dotenv'
+dotenv.config()
+
+//using commonJs module loader
+// require('dotenv').config();
+// const http = require('http');
+// const fs = require('fs/promises');
 
 const hostname = '127.0.0.1';
 const port = process.env.PORT;
