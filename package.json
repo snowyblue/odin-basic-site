@@ -3,7 +3,9 @@
     "devindex": "nodemon index.js",
     "startindex": "node index.js",
     "devserver": "nodemon server.js",
-    "startserver": "node server.js"
+    "startserver": "node server.js",
+    "devawaitserver": "nodemon awaitserver.js",
+    "startawaitserver": "node awaitserver.js"
   },
   "type": "module",
   "dependencies": {
