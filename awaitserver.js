@@ -1,16 +1,13 @@
-import http from 'http';
-import dotenv from 'dotenv';
-import path from 'path';
-import fs from 'fs/promises';
-import { fileURLToPath } from 'url';
+const http = require('http');
+const dotenv = require('dotenv');
+const path = require('path');
+const fs = require('fs/promises');
 
 dotenv.config();
 
 const PORT = process.env.PORT;
 
 const app = http.createServer( async (req, res) => {
-    const __filename = fileURLToPath(import.meta.url);
-    const __dirname = path.dirname(__filename);
     let filePath = path.join(__dirname, 'public', req.url === '/' ? 'index.html' : req.url);
     let extName = path.extname(filePath);
     let contentType = { 'Content-Type': 'text/html' };
